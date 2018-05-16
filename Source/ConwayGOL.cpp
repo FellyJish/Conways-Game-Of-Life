@@ -2,7 +2,7 @@
 #include "CellAutomation.h"
 #include <iostream>
 
-unsigned const uSCREEN_WIDTH = 1024, uSCREEN_HEIGHT = 768, uQUAD_SIZE = 4, uFRAME_RATE = 60;
+unsigned const uSCREEN_WIDTH = 800, uSCREEN_HEIGHT = 600, uQUAD_SIZE = 4, uFRAME_RATE = 60;
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
 		config.uSimWidth = config.uScreenWidth / config.uQuadSize;
 		config.uSimHeight = config.uScreenHeight / config.uQuadSize;
 
-		printf("Window width: %d\nWindow height: %d\nFramerate: %d\n", config.uScreenWidth, config.uScreenHeight, config.uFrameRate);
+		printf("Window width: %d\nWindow height: %d\nFramerate: %d\nCell size: %d\n", config.uScreenWidth, config.uScreenHeight, config.uFrameRate, uQUAD_SIZE);
 	}
 	else if (chOption == 'N' || chOption == 'n')
 	{

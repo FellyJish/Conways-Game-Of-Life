@@ -2,7 +2,12 @@
 #include <random>
 
 
-CellAutomation::CellAutomation(const Config& c) : m_Config(c), m_Board(m_Config), m_Window(sf::VideoMode(m_Config.uScreenWidth, m_Config.uScreenHeight), "Conways Game of Life"), m_CellsVec(m_Config.uSimHeight * m_Config.uSimWidth)
+CellAutomation::CellAutomation(const Config& c) :
+m_Config(c), m_Board(m_Config),
+m_Window(sf::VideoMode(m_Config.uScreenWidth,
+m_Config.uScreenHeight), 
+"Conway's Game of Life"),
+m_CellsVec(m_Config.uSimHeight * m_Config.uSimWidth)
 {
 
 	std::mt19937 rng(std::time(nullptr));

@@ -1,4 +1,4 @@
-Conway's game of life cellular automation for C++ practice!
+Conway's game of life cellular automation, coded in C++ using the SFML graphics library.
 
 Probably the most well known cellular automaton, Conway's Game of life works like this:
 

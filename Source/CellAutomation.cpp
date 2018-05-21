@@ -14,12 +14,9 @@ CellAutomation::CellAutomation(const Config& c) :
 	{
 		std::uniform_int_distribution<int> dist(0, 1);
 		Cell& cell = m_CellsVec[GetCellIndex(x, y)];
-		cell = Cell::Dead;
+		cell = (Cell)dist(rng);
 		m_Board.AddQuad(x, y, GetCellColor(cell));
 	});
-
-	Cell& cell = m_CellsVec[GetCellIndex(m_Config.uScreenWidth/2, m_Config.uScreenHeight/2)];
-	cell = Cell::Alive;
 }
 
 const sf::Color CellAutomation::GetCellColor(const Cell& c) const
@@ -79,6 +76,7 @@ void CellAutomation::UpdateWorld()
 			{
 				int newX = neighbourX + x;
 				int newY = neighbourY + y;
+
 				//World wrapping on the X axis
 				if (newX == m_Config.uSimWidth)
 				{
@@ -99,6 +97,7 @@ void CellAutomation::UpdateWorld()
 					newY = m_Config.uSimHeight - 1;
 				}
 
+				//Skip the cell itself
 				if (newX == x && newY == y)
 					continue;
 
@@ -114,9 +113,9 @@ void CellAutomation::UpdateWorld()
 		updateCell = cell;
 
 		//Enact game of life rules
-		/*switch (cell)
+		switch (cell)
 		{
-		/*case Cell::Alive:
+		case Cell::Alive:
 			if (uLiveNeighbours < 2 || uLiveNeighbours > 3)
 			{
 				updateCell = Cell::Dead;
@@ -129,16 +128,18 @@ void CellAutomation::UpdateWorld()
 				updateCell = Cell::Alive;
 			}
 			break;
-		}*/
+		}
 
-		if (uLiveNeighbours % 2 == 0)
+		//Different cell automata rule I'm coming back to soon
+		/*if (uLiveNeighbours % 2 == 0)
 		{
 			updateCell = Cell::Dead;
 		}
 		else
 		{
 			updateCell = Cell::Alive;
-		}
+		}*/
+
 		//update board with change
 		m_Board.ChangeQuadColour(x, y, GetCellColor(updateCell));
 	});

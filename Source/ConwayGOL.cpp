@@ -2,20 +2,16 @@
 #include "CellAutomation.h"
 #include <iostream>
 
-unsigned const uSCREEN_WIDTH = 800, uSCREEN_HEIGHT = 600, uQUAD_SIZE = 3, uFRAME_RATE = 60;
+unsigned const uSCREEN_WIDTH = 800, uSCREEN_HEIGHT = 600, uQUAD_SIZE = 4, uFRAME_RATE = 60;
 
 int main()
 {
 	Config config;
 	char chOption;
 
-	std::cout << "Hello my lovely, lucious, leggy lesbian named: LUCY\n";
-	std::cout << "This is called Conway's game of life. It kinda simulates what bacteria etc do.\n";
-	std::cout << "It can make some funky ass patterns\n";
-	std::cout << "When prompted, type y or n, and then hit enter.\n";
-	std::cout << "(if you type something else in it MIGHT break as I've not fully accounted for that so DON'T BE A DICK PLEZ <3)\n";
-	std::cout << "--------------------------------------------------------------------------------------------------------------\n\n";
-	std::cout << "Would you like to use default setup? Y/N: ";
+	printf("The default config is:\nScreen Width: %d\nScreen Height: %d\nCell Size: %d\nFrame Rate: %d\n", uSCREEN_HEIGHT, uSCREEN_HEIGHT, uQUAD_SIZE, uFRAME_RATE);
+	std::cout << "---------------\n\n";
+	std::cout << "Would you like to use the default config? Y/N: ";
 	std::cin >> chOption;
 
 	if (chOption == 'Y' || chOption == 'y')

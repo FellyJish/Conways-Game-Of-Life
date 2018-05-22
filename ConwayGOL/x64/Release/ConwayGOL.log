@@ -1,0 +1,10 @@
+﻿  ConwayGOL.cpp
+c:\users\patrick kelly\documents\visual studio 2015\projects\conwaygol\conwaygol\source\CellAutomation.h(29): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
+c:\users\patrick kelly\documents\visual studio 2015\projects\conwaygol\conwaygol\source\CellAutomation.h(29): warning C4477: 'printf' : format string '%c' requires an argument of type 'int', but variadic argument 2 has type 'const char *'
+c:\users\patrick kelly\documents\visual studio 2015\projects\conwaygol\conwaygol\source\CellAutomation.h(29): warning C4313: 'printf': '%c' in format string conflicts with argument 2 of type 'const char *'
+  Generating code
+  1 of 201 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ConwayGOL.vcxproj -> C:\Users\Patrick Kelly\Documents\Visual Studio 2015\Projects\ConwayGOL\x64\Release\ConwayGOL.exe

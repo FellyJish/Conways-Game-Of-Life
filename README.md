@@ -7,6 +7,6 @@ Conway's Game of Life is probably the most popular cellular automaton. It consis
 Every update, each cell checks how many of its eight neighbours are alive.
 
 Depending on how many neighbours are alive, the following happens:  
-A **living** cell with fewer than two, or more than three living neighbours dies.
+A **living** cell with fewer than two, or more than three living neighbours dies.  
 A **dead** cell with three living neighbours comes to life.
 Enjoy!
